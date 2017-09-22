@@ -22,6 +22,7 @@
 
 //console.log(event.keyCode)
 
+$(document).ready(function() {
 
 //BUTTON TO START AND RESET THE GAME
 	$("startBtn").on("click".function() {
@@ -45,6 +46,8 @@
 	        }
 	    }, 1000);
 	}
+
+
 
 
 
@@ -82,3 +85,7 @@ question[4] = {
 	aAnswer: 1,
 	iamge: "troy.gif",
 };
+
+
+//CLOSING THE GAME FUNCTION
+});
