@@ -13,6 +13,21 @@
 	var j = 0;
 	var countdownTimer = 0;
 
+//ON CLICK BUTTON TO START  THE GAME
+	$(document).on('keypress', function(event) {
+    if(event.keyCode === 13) {
+         // Enter key was pressed
+    }
+})
+
+//console.log(event.keyCode)
+
+	$("startBtn").on("click".function() {
+		gameReset();
+
+	});
+
+
 
 
 
