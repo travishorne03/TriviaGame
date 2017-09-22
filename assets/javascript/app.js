@@ -3,14 +3,14 @@
 
 	var question = [];
 	var correctAnswer = "";
-	var answerText = "";
+	var answerCode = "";
 	var clickAnswer = "";
 	var qImage = "";
 	var qCorrect = 0;
 	var qIncorrect = 0;
 	var qUnanswered = 0;
 	var i = 0;
-	var j = 0;
+	var q = 0;
 	var countdownTimer = 0;
 
 //ON CLICK BUTTON TO START  THE GAME
@@ -22,12 +22,29 @@
 
 //console.log(event.keyCode)
 
+
+//BUTTON TO START AND RESET THE GAME
 	$("startBtn").on("click".function() {
 		gameReset();
 
 	});
 
-
+//START TIMER
+	function startTimer() {
+		$("#timer").html(" ");
+		q = 30;
+	    countdownTimer = setInterval(function() {
+	        $("#timer").html(j + " seconds remaining");
+	        q = q - 1;
+	        if (j < 0) {
+	            clearInterval(countdownTimer);
+				$("#triviaQuestion").html("Your time is up!! The answer was: "+answerCode+".");
+	            qUnanswered++;
+	            i++;
+		        showAnswer();
+	        }
+	    }, 1000);
+	}
 
 
 
