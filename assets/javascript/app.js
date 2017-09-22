@@ -1,5 +1,17 @@
 
+//JAVASCRIPT VARIBLES
 
+	var question = [];
+	var correctAnswer = "";
+	var answerText = "";
+	var clickAnswer = "";
+	var qImage = "";
+	var qCorrect = 0;
+	var qIncorrect = 0;
+	var qUnanswered = 0;
+	var i = 0;
+	var j = 0;
+	var countdownTimer = 0;
 
 
 
