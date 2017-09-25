@@ -1,0 +1,12 @@
+.container {
+
+	text-align: center;
+}
+
+.title {
+
+	text-align: center;
+	background-color: grey;
+	border-right: 20px;
+	font-size: 25px;
+}

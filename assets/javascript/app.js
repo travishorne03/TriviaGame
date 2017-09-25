@@ -89,13 +89,13 @@ $(document).ready(function() {
     // (those without a click within 30 seconds).
     function startTimer() {
         $("#timer").html(" ");
-        j = 30;
+        q = 30;
         countdownTimer = setInterval(function() {
-            $("#timer").html(j + " seconds remaining");
-            j = j - 1;
-            if (j < 0) {
+            $("#timer").html(j + "seconds remaining");
+            q = q - 1;
+            if (q < 0) {
                 clearInterval(countdownTimer);
-                $("#triviaQuestion").html("Time's up!!! The answer was: "+answerText+".");
+                $("#triviaQuestion").html("Your time is up!! The answer was: "+answerText+".");
                 qUnanswered++;
                 i++;
                 showAnswer();
@@ -126,18 +126,14 @@ $(document).ready(function() {
     // LIST GROUP AND SHOW IMAGES
     $(".list-group-item").on("click", function() {
         clearInterval(countdownTimer);
- 
-
         i++;
         showAnswer();
     })
 
-    // SHOW GAME RESULTES
+    // SHOW GAME RESULTS
     function showResults() {
 
-       
-
-    }
+     }
 
     // START GAME
     $("#startBtn").on("click", function() {
