@@ -1,5 +1,5 @@
 //JAVASCRIPT VARIBLES
-var question = [];
+var questions = [];
 var correctAnswer = "";
 var answerCode = "";
 var clickAnswer = "";
@@ -18,36 +18,36 @@ $( document ).ready(function() {
     var question = [];
 
 question[0] = {
-        question: "What jersey number did Deion wear while playing football in the NFL?"
-        option: ["5", "21", "99", "54"],
+        questions: "What jersey number did Deion Snaders wear while playing football in the NFL?"
+        options: ["5", "21", "99", "54"],
         aAnswer: 1,
         image: "deion.gif",
     };
 
     question[1] = {
-        question: "How many Super Bowls did Troy Aikman win?"
-        option: ["1", "6", "3", "10"],
+        questions: "How many Super Bowls did Troy Aikman win?"
+        options: ["1", "6", "3", "10"],
         aAnswer: 2,
         image: "troy.gif",
     };
 
     question[2] = {
-        question: "What high school did Kobe Bryant attend?"
-        option: ["Anson High", "Dudley High", "East Texas High", "Lower Merion High"],
+        questions: "What high school did Kobe Bryant attend?"
+        options: ["Anson High", "Dudley High", "East Texas High", "Lower Merion High"],
         aAnswer: 3,
         image: "troy.gif",
     };
 
     question[3] = {
-        question: "Where did Michael Jordan attend college?"
-        option: ["UNC-Chapel Hill", "Duke", "Wake Forest", "Yale"],
+        questions: "Where did Michael Jordan attend college?"
+        options: ["UNC-Chapel Hill", "Duke", "Wake Forest", "Yale"],
         aAnswer: 0,
         image: "troy.gif",
     };
 
     question[4] = {
-        question: "What MLB team did Derek Jeter Play for?"
-        option: ["Cubs", "Yankees", "Red Sox", "Marlins"],
+        questions: "What MLB team did Derek Jeter Play for?"
+        options: ["Cubs", "Yankees", "Red Sox", "Marlins"],
         aAnswer: 1,
         image: "troy.gif",
     };
@@ -78,9 +78,13 @@ question[0] = {
     }
 
     // function to move to next question & reset timer
-    function nextQuestion() {
+    function nextQuestion(answersDisplay) {
         startTimer(); 
         resetQuestion();
+            for (var i = 0; i < currentQuestion.option.length; i++)
+                var newTag = $("<li></li>");
+                    var newAnchor = $("<a href='#' class='answer-option'>" + currentQuestion.options[i] + "</a>");
+                        $("#answer-display").append(newTag).append(newAnchor);
     }
 
     // replace the html with the questions and possible answers. Populate variables with correct answer id, text & image.
@@ -99,8 +103,10 @@ question[0] = {
     }
 
     // listen for click on "list-group". Check if answer is correct and update #triviaQuestion. Call showAnswer() to display image.
-    $(".list-group-item").on("click", function() {
-        clearInterval(countdownTimer);
+    $("#answersDisplay").on("click", ".answer-options", function() {
+
+
+})
 
         // get clicked value 
 
