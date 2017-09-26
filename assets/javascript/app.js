@@ -10,6 +10,7 @@ var qUnanswered = 0;
 var questionIx = 0;
 var questionJx = 0;
 var countdownTimer = 0;
+var currentQuestion = 0;
 
 
 $( document ).ready(function() {
@@ -81,10 +82,11 @@ question[0] = {
     function nextQuestion(answersDisplay) {
         startTimer(); 
         resetQuestion();
-            for (var i = 0; i < currentQuestion.option.length; i++)
+            for (var i = 0; i < currentQuestion.option.length; i++) {
                 var newTag = $("<li></li>");
                     var newAnchor = $("<a href='#' class='answer-option'>" + currentQuestion.options[i] + "</a>");
-                        $("#answer-display").append(newTag).append(newAnchor);
+                        $("#answer-display").append(newTag).append(newAnchor)
+            }
     }
 
     // replace the html with the questions and possible answers. Populate variables with correct answer id, text & image.
