@@ -1,72 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset = "UTF 8">
-	<title>Total Trivia</title>
-
-	<!--OXYGEN GOOGLE FONT-->
-	<link href="https://fonts.googleapis.com/css?family=Oxygen|Titillium+Web" rel="stylesheet">
-
-	<!--BOOTSTRAP-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-	<!--CSS LINK-->
-	<link rel="stylesheet" href="assets/css/style.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-</head>
-<body>
-
-	<div id="triviaContainer" class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="title"> 
-					<h1> SPORTS TRIVIA</h1>
-					  </div>
-						<div>
+	<head>
+		<meta charset="UTF 8">
+		<title>Total Trivia</title>
+		<!--OXYGEN GOOGLE FONT-->
+		<link href="https://fonts.googleapis.com/css?family=Oxygen|Titillium+Web" rel="stylesheet">
+		<!--BOOTSTRAP-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<!--CSS LINK-->
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<div id="triviaContainer" class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title">
+						<h1> SPORTS TRIVIA</h1>
+					</div>
+					<br>
+					<div>
 						<h2 id="timer">TIMER</h2>
-						</div>
-
-						
-						<h3 id="trivia-question">Questions</h3>
-
-					<div id= "answersDisplay">
-					 	<ul>
-						<li id="answer0"> TH</li>
-						<li id="answer1">GH </li>
-						<li id="answer2"> TH</li>
-						<li id="answer3"> KH</li>
-					
-					 	</ul>
-					 </div>
-
-					</div>	
-					 <!--CLOSE LIST DIV-->
 					</div>
-				<!--TITLE DIV CLOSE-->
+					<br>
+					<h3 id="trivia-question">Questions</h3>
+					<div id="answersDisplay">
+						<ul>
+							<li id="answer0" class="qT">TH</li>
+							<li id="answer1" class="qT">GH</li>
+							<li id="answer2" class="qT">TH</li>
+							<li id="answer3" class="qT">KH</li>
+						</ul>
 					</div>
-			<!--CLOSE COL DIV-->
+				</div>
+				<!--CLOSE LIST DIV-->
 			</div>
-		<!--ROW CLOSE DIV-->
-		</div>		
-	<!--1ST triviaContainer DIV CLOSE-->
-	</div>
+			<!--TITLE DIV CLOSE-->
+			<div id="results" class="container results" style="display:none;"></div>
+			<!--JAVASCRIPT LINK-->
+		</div>
+		
+		
+		<style>
+			body {
+				background-image: url("https://previews.123rf.com/images/vadymvdrobot/vadymvdrobot1504/vadymvdrobot150400995/39001336-Conceptual-collage-of-sports-photos-in-the-form-of-the-word-sport-Stock-Photo.jpg");
+			}
+		</style>
 
-	<div id="results" class="container results" style="display:none;"></div>
-
-
-
-
-	
-
-	<!--JAVASCRIPT LINK-->
-	<script type="text/javascript" href="assets/javascript/app.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-</body>
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/javascript/app.js"></script>
+	</body>
 </html>

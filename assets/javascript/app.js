@@ -1,3 +1,5 @@
+"use strict";
+
 //JAVASCRIPT VARIBLES
 var questions = [];
 var correctAnswer = "";
@@ -12,41 +14,41 @@ var j = 0;
 var countdownTimer = 0;
 var currentQuestion = 0;
 
-$( document ).ready(function() {
+$(document).ready(function() {
 
     //initialize variables  
     var questions = [];
 
-questions[0] = {
-        questions: "What jersey number did Deion Snaders wear while playing football in the NFL?"
+    questions[0] = {
+        questions: "What jersey number did Deion Sanders wear while playing football in the NFL?",
         options: ["5", "21", "99", "54"],
         aAnswer: 1,
         image: "deion.gif",
     };
 
     questions[1] = {
-        questions: "How many Super Bowls did Troy Aikman win?"
+        questions: "How many Super Bowls did Troy Aikman win?",
         options: ["1", "6", "3", "10"],
         aAnswer: 2,
         image: "troy.gif",
     };
 
     questions[2] = {
-        questions: "What high school did Kobe Bryant attend?"
+        questions: "What high school did Kobe Bryant attend?",
         options: ["Anson High", "Dudley High", "East Texas High", "Lower Merion High"],
         aAnswer: 3,
         image: "troy.gif",
     };
 
     questions[3] = {
-        questions: "Where did Michael Jordan attend college?"
+        questions: "Where did Michael Jordan attend college?",
         options: ["UNC-Chapel Hill", "Duke", "Wake Forest", "Yale"],
         aAnswer: 0,
         image: "troy.gif",
     };
 
     questions[4] = {
-        questions: "What MLB team did Derek Jeter Play for?"
+        questions: "What MLB team did Derek Jeter Play for?",
         options: ["Cubs", "Yankees", "Red Sox", "Marlins"],
         aAnswer: 1,
         image: "troy.gif",
@@ -68,7 +70,7 @@ questions[0] = {
             j = j - 1;
             if (j < 0) {
                 clearInterval(countdownTimer);
-                $("#triviaQuestion").html("Time's up!!! The answer was: "+answerText+".");
+                $("#trivia-question").html("Your time is up!! The answer was: " + answerCode + ".");
                 qUnanswered++;
                 i++;
                 showAnswer();
@@ -78,12 +80,17 @@ questions[0] = {
 
     // function to move to next question & reset timer
     function nextQuestion() {
-        startTimer(); 
+        startTimer();
         resetQuestion();
     }
 
     // replace the html with the questions and possible answers. Populate variables with correct answer id, text & image.
     function resetQuestion() {
+        $("#trivia-question").html(questions[i].questions);
+        $("#answer0").html(questions[i].options[0]);
+        $("#answer1").html(questions[i].options[1]);
+        $("#answer2").html(questions[i].options[2]);
+        $("#answer3").html(questions[i].options[3]);
 
         // jquery to update HTML questions & answers
 
@@ -100,6 +107,15 @@ questions[0] = {
     // listen for click on "list-group". Check if answer is correct and update #triviaQuestion. Call showAnswer() to display image.
     $(".list-group-item").on("click", function() {
         clearInterval(countdownTimer);
+
+    clickAnswer = $(this).attr("value"); 
+        if (clickAnswer == correctAnswer) { 
+            $("#trivia-question").html("Correct!")
+            qCorrect++;
+        } else {
+            $("#trivia-question").html("Sorry, that's incorrect. The answer was: "+answerText+".")
+            qIncorrect++;
+        }
 
         // get clicked value 
 
@@ -118,10 +134,10 @@ questions[0] = {
     $("#startBtn").on("click", function() {
         gameReset();
     });
-startTimer();
+
+    nextQuestion();
+
 });
-
-
 
 
 

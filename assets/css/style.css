@@ -1,3 +1,20 @@
+
+body {
+
+	background-color: red;
+}
+
+#background-size {
+
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+
+}
+
+
 .container {
 
 	text-align: center;
@@ -6,8 +23,48 @@
 .title {
 
 	text-align: center;
-	background-color: grey;
+	background-color: #ff704d;
 	border-right: 20px;
 	font-size: 25px;
 	border-radius: 15px;
+	padding: 25px;
+	border-color: red;
+	margin: 14px;
+	
+}
+
+
+#timer {
+	font-weight: normal;
+	background-color: #99ff66;
+	height: 30px;
+	width: 300px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+ 
+#answersDisplay {
+	background-color: white;
+	padding: 20px;
+	margin-left: 120px;
+	margin-right: 120px;
+
+
+}
+/*
+.qT {
+
+	background-color: #66ccff;
+
+
+}*/
+
+
+#answer0,
+#answer1,
+#answer2,
+#answer3, {
+
+	background-color:  #66ccff;
+
 }
