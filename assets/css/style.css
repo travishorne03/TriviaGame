@@ -51,20 +51,34 @@ body {
 
 
 }
-/*
-.qT {
+
+#answer0 {
 
 	background-color: #66ccff;
 
 
-}*/
+}
 
+#answer1 {
 
-#answer0,
-#answer1,
-#answer2,
-#answer3, {
+	background-color: #66ccff;
 
-	background-color:  #66ccff;
 
 }
+
+#answer2 {
+
+	background-color: #66ccff;
+
+
+}
+
+#answer3 {
+
+	background-color: #66ccff;
+
+
+}
+
+
+
