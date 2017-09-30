@@ -23,14 +23,14 @@ body {
 .title {
 
 	text-align: center;
-	background-color: #ff704d;
-	border-right: 20px;
+	background-color: white;
 	font-size: 25px;
 	border-radius: 15px;
 	padding: 25px;
 	border-color: red;
 	margin: 14px;
-	
+	border-width: 75px;
+	border-top-color: orange;
 }
 
 
@@ -44,10 +44,13 @@ body {
 }
  
 #answersDisplay {
+	text-align: center;
 	background-color: white;
-	padding: 20px;
-	margin-left: 120px;
-	margin-right: 120px;
+	font-size: 25px;
+	border-radius: 15px;
+	padding: 25px;
+	border-color: red;
+	margin: 14px;
 
 
 }
@@ -55,6 +58,10 @@ body {
 #answer0 {
 
 	background-color: #66ccff;
+	text-indent: 50%;
+
+
+
 
 
 }
@@ -62,6 +69,8 @@ body {
 #answer1 {
 
 	background-color: #66ccff;
+	text-indent: 50%;
+
 
 
 }
@@ -69,6 +78,7 @@ body {
 #answer2 {
 
 	background-color: #66ccff;
+	text-indent: 50%;
 
 
 }
@@ -76,9 +86,18 @@ body {
 #answer3 {
 
 	background-color: #66ccff;
+	text-indent: 50%;
 
 
 }
 
-
+#trivia-question {
+	text-align: center;
+	background-color: white;
+	font-size: 20px;
+	border-radius: 15px;
+	padding: 25px;
+	border-color: red;
+	margin: 14px;
+}
 
