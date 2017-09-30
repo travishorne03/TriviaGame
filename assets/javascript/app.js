@@ -3,7 +3,7 @@
 //JAVASCRIPT VARIBLES
 var questions = [];
 var correctAnswer = "";
-var answerCode = "";
+var answerText = "";
 var clickAnswer = "";
 var qImage = "";
 var qCorrect = 0;
@@ -70,7 +70,7 @@ $(document).ready(function() {
             j = j - 1;
             if (j < 0) {
                 clearInterval(countdownTimer);
-                $("#trivia-question").html("Your time is up!! The answer was: " + answerCode + ".");
+                $("#trivia-question").html("Your time is up!! The answer was: " + answerText + ".");
                 qUnanswered++;
                 i++;
                 showAnswer();
@@ -106,11 +106,12 @@ $(document).ready(function() {
 
     // listen for click on "list-group". Check if answer is correct and update #triviaQuestion. Call showAnswer() to display image.
     $(".list-group-item").on("click", function() {
+        console.log('click event triggered')
         clearInterval(countdownTimer);
 
     clickAnswer = $(this).attr("value"); 
         if (clickAnswer == correctAnswer) { 
-            $("#trivia-question").html("Correct!")
+            $("#trivia-question").html("Correct Answer")
             qCorrect++;
         } else {
             $("#trivia-question").html("Sorry, that's incorrect. The answer was: "+answerText+".")
@@ -121,6 +122,7 @@ $(document).ready(function() {
 
         i++;
         showAnswer();
+        resetQuestion();
     })
 
     // Function to show game results. Update results div with stats and show() them. Hide() other irrelevant divs. Change text on start button and show().
