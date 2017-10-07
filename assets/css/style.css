@@ -42,7 +42,7 @@ body {
 	margin: 0 auto;
 	border-radius: 5px;
 }
- 
+
 #answersDisplay {
 	text-align: center;
 	background-color: white;
@@ -104,4 +104,3 @@ body {
 	border-color: red;
 	margin: 14px;
 }
-
